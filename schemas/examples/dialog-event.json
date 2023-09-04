@@ -1,0 +1,34 @@
+{
+    "schema": "ovon/conversation/pre-alpha-1.0.1",
+    "event": {
+        "id": "21680825631298608436367356332136",
+        "origin_server_ts": 1692966768
+    },
+    "conversation": {
+        "id": "31050879662407560061859425913208"
+    },
+    "message": {
+        "response_to": "94234007341143393076049309873622",
+        "sensitivity": 1,
+        "encryption": "none",
+        "content": {
+            "type": "text",
+            "lang": "en",
+            "encoding": "UTF-8",
+            "body": "What is the weather like in Tallinn?",
+            "formatted_body": "<p>What is the weather like in Tallinn?</p>"
+        }
+    },
+    "participants": {
+        "from": {
+            "from": "https://example.com/message-from",
+            "reply-to": "https://example.com/reply-message-to",
+            "avatar_url": "https://example.com/display-name-avatar.png",
+            "displayname": "Display Name"
+        },
+        "to": {
+            "address": "https://example.com/chatbot",
+            "labels": ""
+        }
+    }
+}
