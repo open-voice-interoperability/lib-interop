@@ -1,22 +1,25 @@
 {
     "ovon": {
-       "version": "1.0"
-    },
+        "schema": {
+            "url": "https://ovon/conversation/pre-alpha-1.0.1",
+            "version": "1.0"      
+        },
 
-    "context": {
-        "conversationID": "some-unique-convo-ID"
-    },
+        "conversation": {
+            "id": "31050879662407560061859425913208"
+        }, 
 
-    "events": [
-        { 
-            "event-type": "assistant-engage",
-            "parameters": {
-                "dialog-event": {
-                    "speaker-id": "ab8k907jjj",
-                    "span": { "start-time": "2023-06-14 02:06:07+00:00" },
-                    "features": {}
-                }               
+        "events": [
+            { 
+                "event-type": "assistant-engage",
+                "parameters": {
+                    "dialog-event": {
+                        "speaker-id": "ab8k907jjj",
+                        "span": { "start-time": "2023-06-14 02:06:07+00:00" },
+                        "features": {}
+                    }               
+                }
             }
-        }
-    ]
+        ]
+    }
 }

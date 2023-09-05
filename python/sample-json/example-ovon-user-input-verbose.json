@@ -1,68 +1,60 @@
 {
     "ovon": {
-        "version": "1.0",
-        "time-stamp": "2023-06-14 02:06:07+00:00"
-    },
+        "schema": {
+            "url": "https://ovon/conversation/pre-alpha-1.0.1",
+            "version": "1.0"      
+        },
 
-    "context": {
-        "conversationID": "some-unique-convo-ID",
-        "speakers": [
-            {
-                "speaker-id": "b5y09lky5KU5",
-                "accessToken": "asdfadsf",
-                "role": "user"
-            },
-            {
-                "agent-id": "pharmacy1.com",
-                "speaker-id": "mh8k907jjj",
-                "accessToken": "sdlfkjalkhjasd",
-                "role": "system"
+        "conversation": {
+            "id": "31050879662407560061859425913208",
+            "thread" : "abcdef234567hygt",
+
+            "delegate-history": [
+                {"#":"History of delegation events in here, or maybe a history server url"}
+            ],
+
+            "utterance-history": [
+                {"#":"Utterance history events in here, or maybe a history server url"}
+            ],
+
+            "custom-context": {
+                "#arbitrary items here or do we define some?#":""
             }
-        ],
-        "agent-history": [
-            "azeba.amazon.com",
-            "voice-task-finder.com"
-        ],
-        "utterance-history": [
-            {"#":"Utterance history events in here, or maybe a history server reference"}
-        ],
-        "custom-context": {
-            "#arbitrary items here or do we define some?#":""
-        }
-    },
+        }, 
 
-    "events": [
-        {
-            "event-type": "utterance",
-            "parameters": {
-                "dialog-event": {
-                    "speaker-id": "b5y09lky5KU5",
+        "events": [
+            {
+                "event-type": "utterance",
+                "parameters": {
+                    "dialog-event": {
+                        "speaker-id": "b5y09lky5KU5",
 
-                    "span": {
-                    "start-time": "2023-06-14 02:06:07+00:00",
-                    "end-offset": "PT0.2493"
-                    },
-                
-                    "features": {
-                        "text": {
-                            "mime-type": "text/plain",
-                            "lang": "en",
-                            "encoding": "UTF-8",
-                            "tokens": [
-                            {
-                                "value": "I need my repeat medication",
-                                "confidence": 0.702
-                            }  
-                            ]
-                        }
-                    },
+                        "span": {
+                        "start-time": "2023-06-14 02:06:07+00:00",
+                        "end-offset": "PT0.2493"
+                        },
+                    
+                        "features": {
+                            "text": {
+                                "mime-type": "text/plain",
+                                "lang": "en",
+                                "encoding": "UTF-8",
+                                "tokens": [
+                                {
+                                    "value": "I need my repeat medication",
+                                    "confidence": 0.702
+                                }  
+                                ]
+                            }
+                        },
 
-                    "custom-id": "1",
-                    "custom-mode": "input/voice",
-                    "custom-originPointType": "chromium based edge",
-                    "custom-asrType": "webkitSpeechRecognition"
+                        "custom-id": "1",
+                        "custom-mode": "input/voice",
+                        "custom-originPointType": "chromium based edge",
+                        "custom-asrType": "webkitSpeechRecognition"
+                    }
                 }
             }
-        }
-    ]
+        ]
+    }
 }
