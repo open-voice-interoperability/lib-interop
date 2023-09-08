@@ -6,7 +6,24 @@
         },
 
         "conversation": {
-            "id": "31050879662407560061859425913208"
+            "id": "31050879662407560061859425913208",
+
+            "speakers": [
+                {
+                    "speaker-id" : "mh8k907jjj",   
+                    "speaker_type" : "bot",
+                    "spoken-name" : "Bot Mc-bot Face",
+                    "display-name" : "Bot Mc-bot Face",
+                    "avatar-url": "https://example.com/display-name-avatar.png"
+                },
+                {
+                    "speaker-id" : "sdfkjhsdg98797234523",   
+                    "speaker_type" : "human",
+                    "displayname": "User Mc-user Face",
+                    "spoken-name" : "User Mc-user Face",
+                    "avatar-url": "https://example.com/usermcuserface.png"
+                }
+            ]
         }, 
 
         "sender": {
@@ -36,7 +53,6 @@
                 "parameters": {
                     "to": {
                         "url": "https://mybot.pharmacy.com",
-                        "labels*": ""
                     },     
                     "whisper-dialog-event*": {
                         "speaker-id": "xxxxx",
@@ -47,6 +63,15 @@
                                 "tokens": [ { "value": "prescribe 180mg of citalopram"  } ]
                             }
                         }
+                    }
+                }
+            },
+            { 
+                "event-type": "utterance-forward",
+                "parameters": {
+                    "to": {
+                        "url": "https://example.com/DMR",
+                        "labels*": ""
                     }
                 }
             }

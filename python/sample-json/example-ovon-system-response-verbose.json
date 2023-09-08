@@ -8,6 +8,23 @@
         "conversation": {
             "id": "31050879662407560061859425913208",
             "thread" : "abcdef234567hygt",
+            
+            "speakers": [
+                {
+                    "speaker-id" : "mh8k907jjj",   
+                    "speaker_type" : "bot",
+                    "spoken-name" : "Bot Mc-bot Face",
+                    "display-name" : "Bot Mc-bot Face",
+                    "avatar-url": "https://example.com/display-name-avatar.png"
+                },
+                {
+                    "speaker-id" : "sdfkjhsdg98797234523",   
+                    "speaker_type" : "human",
+                    "displayname": "User Mc-user Face",
+                    "spoken-name" : "User Mc-user Face",
+                    "avatar-url": "https://example.com/usermcuserface.png"
+                }
+            ],
 
             "delegate-history": [
                 {"#":"History of delegation events in here, or maybe a history server url"}
