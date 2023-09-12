@@ -18,7 +18,6 @@
             {
                 "event-type": "utterance",
                 "parameters": {
-
                     "dialog-event": {
                         "speaker-id": "mh8k907jjj",
                         "span": { "start-time": "2023-06-14 02:06:07+00:00" },
@@ -31,14 +30,11 @@
                     }
                 }
             },
-            { 
-                "event-type": "assistant-delegate",
-                "parameters": {
-                    "to": {
-                        "url": "https://mybot.pharmacy.com",
-                        "labels*": ""
-                    },     
-                    "whisper-dialog-event*": {
+
+            {
+                "event-type": "whisper-utterance",
+                "parameters": {    
+                    "dialog-event": {
                         "speaker-id": "xxxxx",
                         "span": { "start-time": "2023-06-14 02:06:07+00:00" },
                         "features": {
@@ -49,8 +45,16 @@
                         }
                     }
                 }
+            },
+            
+            { 
+                "event-type": "assistant-delegate",
+                "parameters": {
+                    "to": {
+                        "url": "https://mybot.pharmacy.com"
+                    }
+                }
             }
-
         ]
     }
 }
