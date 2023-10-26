@@ -25,7 +25,7 @@ const OVON_ByeSuperMin = {
     }
 }
 
-// Adding an "utterance" will support the Assistant's goodbye message if desired.
+// Adding an "utterance" will support the Assistant's goodbye message (recommended?).
 const OVON_ByeWithUtt = {
     "ovon": {
         "conversation": {
@@ -41,7 +41,7 @@ const OVON_ByeWithUtt = {
                 "parameters": {
                     "dialogEvent": {
                         "speakerId": "AssistantID",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
                                 "mimeType": "text/plain",

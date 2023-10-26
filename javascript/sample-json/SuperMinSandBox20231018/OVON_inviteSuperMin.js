@@ -55,8 +55,8 @@ const OVON_invite_NextAssistantWithUttOrWhisper = {
                 "eventType": "utterance",
                 "parameters": {
                     "dialogEvent": {
-                        "speaker_id": "humanOrAssistantID",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                        "speakerId": "humanOrAssistantID",
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
                                 "mimeType": "text/plain",
@@ -71,7 +71,7 @@ const OVON_invite_NextAssistantWithUttOrWhisper = {
                 "parameters": {
                     "dialogEvent": {
                         "speakerId": "humanOrAssistantID",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
                                 "mimeType": "text/plain",
