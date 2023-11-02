@@ -8,10 +8,10 @@
 const OVON_invite_NextAssistantSuperMin = {
     "ovon": {
         "conversation": {
-            "id": "someUniqueIdCreatedByTheFirstParticipant",
+            "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
         "sender": {
-            "from": "https://someBotThatOfferedTheInvite.com",
+            "from": "https://someBotThatOfferedTheInvite.com"
         },
         "responseCode" : 200,
         "events": [
@@ -36,10 +36,10 @@ const OVON_invite_NextAssistantSuperMin = {
 const OVON_invite_NextAssistantWithUttOrWhisper = {
     "ovon": {
         "conversation": {
-            "id": "someUniqueIdCreatedByTheFirstParticipant",
+            "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
         "sender": {
-            "from": "https://someBotThatOfferedTheInvite.com",
+            "from": "https://someBotThatOfferedTheInvite.com"
         },
         "responseCode" : 200,
         "events": [

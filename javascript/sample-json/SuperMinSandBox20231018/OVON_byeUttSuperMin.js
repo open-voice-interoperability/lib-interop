@@ -11,10 +11,10 @@
 const OVON_ByeSuperMin = {
     "ovon": {
         "conversation": {
-            "id": "someUniqueIdCreatedByTheFirstParticipant",
+            "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
         "sender": {
-            "from": "https://someBotThatOfferedTheBye.com",
+            "from": "https://someBotThatOfferedTheBye.com"
         },
         "responseCode" : 200,
         "events": [
@@ -29,10 +29,10 @@ const OVON_ByeSuperMin = {
 const OVON_ByeWithUtt = {
     "ovon": {
         "conversation": {
-            "id": "someUniqueIdCreatedByTheFirstParticipant",
+            "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
         "sender": {
-            "from": "https://someBotThatOfferedTheBye.com",
+            "from": "https://someBotThatOfferedTheBye.com"
         },
         "responseCode" : 200,
         "events": [

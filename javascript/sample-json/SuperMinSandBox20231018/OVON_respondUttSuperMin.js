@@ -11,10 +11,10 @@
 const OVON_RespondSuperMin = {
     "ovon": {
         "conversation": {
-            "id": "someUniqueIdCreatedByTheFirstParticipant",
+            "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
         "sender": {
-            "from": "https://someBotThatOfferedTheUtterance.com",
+            "from": "https://someBotThatOfferedTheUtterance.com"
         },
         "responseCode" : 200,
         "events": [
