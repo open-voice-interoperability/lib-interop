@@ -86,7 +86,7 @@
                         "dialogEvent": {
                           "type": "object"
                         }
-                      },
+                      },  
                       "additionalProperties": false
                     }
                   }
@@ -107,11 +107,41 @@
                       "type" : "object",
                       "properties" : {
                         "dialogEvent": {
-                          "type": "object"
+                          "type" : "object"
                         }
                       },
                       "additionalProperties": false
                     }
+                  }
+                }
+              },
+
+              {
+                "if": {
+                  "properties": {
+                    "eventType": { "const": "invite" }
+                  },
+                  "required": ["eventType"]
+                },
+                "then" : {
+                  "properties": { 
+                    "parameters" : {
+                      "description": "Parameters for the invite event.",
+                      "type": "object",
+                      "properties": {      
+                        "to"  : {
+                          "type" : "object",
+                          "properties": {
+                            "url" : {
+                              "$ref": "#/$defs/url",
+                              "description": "The URL of the agent to be invited."
+                            }
+                          },
+                          "additionalProperties": false
+                        }        
+                      },
+                      "additionalProperties": false
+                    } 
                   }
                 }
               },
@@ -128,9 +158,9 @@
                     "parameters" : {
                       "description": "Parameters for the bye event.",
                       "type": "object",
-                      "properties": {}
-                    },  
-                    "additionalProperties": false
+                      "properties": { },
+                      "additionalProperties": false
+                    }
                   }
                 }
               }
