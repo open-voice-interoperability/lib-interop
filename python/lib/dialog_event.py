@@ -5,11 +5,11 @@ from datetime import datetime
 from jsonpath_ng import jsonpath, parse
 
 # standard element names
-ELMNT_SPEAKER_ID='speaker-id'
+ELMNT_speakerId='speakerID'
 ELMNT_ID='id'
-ELMNT_PREV_ID='previous-id'
+ELMNT_PREV_ID='previousId'
 ELMNT_FEATURES='features'
-ELMNT_MIME_TYPE='mime-type'
+ELMNT_mimeType='mimeType'
 ELMNT_LANG='lang'
 ELMNT_ENCODING='encoding'
 ELMNT_TOKENS='tokens'
@@ -18,10 +18,10 @@ ELMNT_VALUE_URL='value-url'
 ELMNT_LINKS='links'
 ELMNT_CONFIDENCE='confidence'
 ELMNT_HISTORY='history'  
-ELMNT_START='start-time'
-ELMNT_START_OFFSET='start-offset'
-ELMNT_END='end-time'
-ELMNT_END_OFFSET='end-offset'
+ELMNT_START='startTime'
+ELMNT_startOffset='startOffset'
+ELMNT_END='endTime'
+ELMNT_endOffset='endOffset'
 ELMNT_SPAN='span'
 
 class DialogPacket():
@@ -46,27 +46,27 @@ class DialogPacket():
         self._packet=p
 
     @classmethod
-    # return the feature class for the mime-type
-    def add_feature_class(cls,mime_type,feature_class):
-        cls._feature_class_map['mime_type']=feature_class
+    # return the feature class for the mimeType
+    def add_feature_class(cls,mimeType,feature_class):
+        cls._feature_class_map['mimeType']=feature_class
 
     @classmethod
     def add_default_feature_classes(cls):
         cls.add_feature_class('text/plain',TextFeature)
 
     @classmethod
-    # return the feature class for the mime-type
-    def feature_class(cls,mime_type):
+    # return the feature class for the mimeType
+    def feature_class(cls,mimeType):
         try:
-            return cls._feature_class_map['mime_type']
+            return cls._feature_class_map['mimeType']
         except:
             return Feature    
 
     @classmethod
-    # return the feature class for the mime-type
-    def value_class(cls,mime_type):
+    # return the feature class for the mimeType
+    def value_class(cls,mimeType):
         try:
-            return cls._value_class_map['mime_type']
+            return cls._value_class_map['mimeType']
         except:
             return str  
 
@@ -105,56 +105,56 @@ class DialogPacket():
 class Span(DialogPacket):
     ### Constructor ###
     '''Construct an empty dialog event'''
-    def __init__(self,start_time=None,start_offset=None,end_time=None,end_offset=None,end_offset_msec=None,start_offset_msec=None):
+    def __init__(self,startTime=None,startOffset=None,endTime=None,endOffset=None,endOffset_msec=None,startOffset_msec=None):
         super().__init__()
-        if start_time is not None: 
-           self.start_time=start_time
-        if self.start_offset is not None:
-           self.start_offset=start_offset
-        if start_offset_msec is not None:
-           self.start_offset=f'PT{round(start_offset_msec/1000,6)}'
-        if end_time is not None: 
-           self.end_time=end_time
-        if end_offset is not None:
-            self.end_offset=end_offset   
-        if end_offset_msec is not None:
-           self.end_offset=f'PT{round(end_offset_msec/1000,6)}'
+        if startTime is not None: 
+           self.startTime=startTime
+        if self.startOffset is not None:
+           self.startOffset=startOffset
+        if startOffset_msec is not None:
+           self.startOffset=f'PT{round(startOffset_msec/1000,6)}'
+        if endTime is not None: 
+           self.endTime=endTime
+        if endOffset is not None:
+            self.endOffset=endOffset   
+        if endOffset_msec is not None:
+           self.endOffset=f'PT{round(endOffset_msec/1000,6)}'
 
-    # property: start_time
+    # property: startTime
     @property
-    def start_time(self):
+    def startTime(self):
         return self._packet.get(ELMNT_START,None)
 
-    @start_time.setter
-    def start_time(self,s):
+    @startTime.setter
+    def startTime(self,s):
         self._packet[ELMNT_START]=s
 
-    # property: end_time
+    # property: endTime
     @property
-    def end_time(self):
+    def endTime(self):
         return self._packet.get(ELMNT_END,None)
 
-    @end_time.setter
-    def end_time(self,s):
+    @endTime.setter
+    def endTime(self,s):
         self._packet[ELMNT_END]=s
 
-    # property: start-offset
+    # property: startOffset
     @property
-    def start_offset(self):
-        return self._packet.get(ELMNT_START_OFFSET,None)
+    def startOffset(self):
+        return self._packet.get(ELMNT_startOffset,None)
 
-    @start_offset.setter
-    def start_offset(self,s):
-        self._packet[ELMNT_START_OFFSET]=s
+    @startOffset.setter
+    def startOffset(self,s):
+        self._packet[ELMNT_startOffset]=s
 
-    # property: end-offset
+    # property: endOffset
     @property
-    def end_offset(self):
-        return self._packet.get(ELMNT_END_OFFSET,None)
+    def endOffset(self):
+        return self._packet.get(ELMNT_endOffset,None)
 
-    @end_offset.setter
-    def end_offset(self,s):
-        self._packet[ELMNT_END_OFFSET]=s
+    @endOffset.setter
+    def endOffset(self,s):
+        self._packet[ELMNT_endOffset]=s
 
 class DialogEvent(DialogPacket):
     ### Constructor ###
@@ -164,12 +164,12 @@ class DialogEvent(DialogPacket):
 
     # property: speeaker_id
     @property
-    def speaker_id(self):
-        return self._packet.get(ELMNT_SPEAKER_ID,None)
+    def speakerId(self):
+        return self._packet.get(ELMNT_speakerId,None)
 
-    @speaker_id.setter
-    def speaker_id(self,s):
-        self._packet[ELMNT_SPEAKER_ID]=s
+    @speakerId.setter
+    def speakerId(self,s):
+        self._packet[ELMNT_speakerId]=s
 
     # property: id
     @property
@@ -228,7 +228,7 @@ class DialogEvent(DialogPacket):
         fpacket=self.features.get(feature_name,None)
         
         if fpacket is not None: 
-            feature=self.feature_class(fpacket.get(ELMNT_MIME_TYPE,None))()
+            feature=self.feature_class(fpacket.get(ELMNT_mimeType,None))()
             feature.packet=fpacket
             return feature
         else:
@@ -238,14 +238,14 @@ class Feature(DialogPacket):
     ### Constructor ###
 
     '''Construct a dialog event feature'''
-    def __init__(self,mime_type=None,lang=None,encoding=None,p={},**kwargs):
+    def __init__(self,mimeType=None,lang=None,encoding=None,p={},**kwargs):
         #print(f'Feature() kwargs: {kwargs}')
         super().__init__(**kwargs)        
         #print(f'A2: {self.packet}')
         self._token_class=Token
         
-        if mime_type is not None: 
-            self._packet[ELMNT_MIME_TYPE]=mime_type
+        if mimeType is not None: 
+            self._packet[ELMNT_mimeType]=mimeType
         if lang is not None:
             self._packet[ELMNT_LANG]=lang
         if encoding is not None:
@@ -268,10 +268,10 @@ class Feature(DialogPacket):
         return token
 
     ### Getters and Setters ###
-    # property: mime_type
+    # property: mimeType
     @property
-    def mime_type(self):
-        return self._packet.get(ELMNT_MIME_TYPE,None)
+    def mimeType(self):
+        return self._packet.get(ELMNT_mimeType,None)
 
     # property: lang
     @property
@@ -292,21 +292,21 @@ class Feature(DialogPacket):
 class TextFeature(Feature):
     def __init__(self,**kwargs):
         #print(f'Text Feature() kwargs: {kwargs}')
-        super().__init__(mime_type='text/plain',**kwargs)
+        super().__init__(mimeType='text/plain',**kwargs)
         #print(f'A3: {self.packet}')
         self._token_class=Token
 
 class AudioWavFileFeature(Feature):
     def __init__(self,**kwargs):
         #print(f'Text Feature() kwargs: {kwargs}')
-        super().__init__(mime_type='audio/wav',**kwargs)
+        super().__init__(mimeType='audio/wav',**kwargs)
         #print(f'A3: {self.packet}')
         self._token_class=Token
 
 class Token(DialogPacket):
     ### Constructor ###
     '''Construct a dialog event token.'''
-    def __init__(self,value=None,value_url=None,links=None,confidence=None,start_time=None,start_offset=None,end_time=None,end_offset=None,end_offset_msec=None,start_offset_msec=None):
+    def __init__(self,value=None,value_url=None,links=None,confidence=None,startTime=None,startOffset=None,endTime=None,endOffset=None,endOffset_msec=None,startOffset_msec=None):
         super().__init__()
 
         if value is not None: 
@@ -317,8 +317,8 @@ class Token(DialogPacket):
             self._packet[ELMNT_LINKS]=links
         if confidence is not None:
             self._packet[ELMNT_CONFIDENCE]=confidence   
-        if start_time is not None or start_offset is not None or end_time is not None or end_offset is not None or end_offset_msec is not None or start_offset_msec is not None:
-            self.add_span(Span(start_time=start_time,start_offset=start_offset,end_time=end_time,end_offset=end_offset,end_offset_msec=end_offset_msec,start_offset_msec=start_offset_msec))
+        if startTime is not None or startOffset is not None or endTime is not None or endOffset is not None or endOffset_msec is not None or startOffset_msec is not None:
+            self.add_span(Span(startTime=startTime,startOffset=startOffset,endTime=endTime,endOffset=endOffset,endOffset_msec=endOffset_msec,startOffset_msec=startOffset_msec))
     
     ### Getters and Setters ###
     @property

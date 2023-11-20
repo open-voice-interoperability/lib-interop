@@ -24,19 +24,19 @@
 
         "events": [
             {
-                "event-type": "utterance",
+                "eventType": "utterance",
                 "parameters": {
-                    "dialog-event": {
-                        "speaker-id": "b5y09lky5KU5",
+                    "dialogEvent": {
+                        "speakerID": "b5y09lky5KU5",
 
                         "span": {
-                        "start-time": "2023-06-14 02:06:07+00:00",
-                        "end-offset": "PT0.2493"
+                        "startTime": "2023-06-14 02:06:07+00:00",
+                        "endOffset": "PT0.2493"
                         },
                     
                         "features": {
                             "text": {
-                                "mime-type": "text/plain",
+                                "mimeType": "text/plain",
                                 "lang": "en",
                                 "encoding": "UTF-8",
                                 "tokens": [

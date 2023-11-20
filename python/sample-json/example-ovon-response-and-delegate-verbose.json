@@ -10,14 +10,14 @@
 
             "speakers": [
                 {
-                    "speaker-id" : "mh8k907jjj",   
+                    "speakerID" : "mh8k907jjj",   
                     "speaker_type" : "bot",
                     "spoken-name" : "Bot Mc-bot Face",
                     "display-name" : "Bot Mc-bot Face",
                     "avatar-url": "https://example.com/display-name-avatar.png"
                 },
                 {
-                    "speaker-id" : "sdfkjhsdg98797234523",   
+                    "speakerID" : "sdfkjhsdg98797234523",   
                     "speaker_type" : "human",
                     "displayname": "User Mc-user Face",
                     "spoken-name" : "User Mc-user Face",
@@ -28,20 +28,19 @@
 
         "sender": {
             "from": "https://example.com/message-from",
-            "reply-to": "https://example.com/reply-message-to"
+            "replyTo": "https://example.com/reply-message-to"
         },
 
         "events": [
             {
-                "event-type": "utterance",
+                "eventType": "utterance",
                 "parameters": {
-
-                    "dialog-event": {
-                        "speaker-id": "mh8k907jjj",
-                        "span": { "start-time": "2023-06-14 02:06:07+00:00" },
+                    "dialogEvent": {
+                        "speakerID": "mh8k907jjj",
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
-                                "mime-type": "text/plain",
+                                "mimeType": "text/plain",
                                 "tokens": [ { "value": "OK. I'll pass you over to pharmacy dot com."  } ]
                             }
                         }
@@ -49,33 +48,28 @@
                 }
             },
             { 
-                "event-type": "assistant-delegate",
+                "eventType": "invite",
                 "parameters": {
                     "to": {
-                        "url": "https://mybot.pharmacy.com",
-                    },     
-                    "whisper-dialog-event*": {
-                        "speaker-id": "xxxxx",
-                        "span": { "start-time": "2023-06-14 02:06:07+00:00" },
+                        "url": "https://mybot.pharmacy.com"
+                    }   
+                }
+            },
+            { 
+                "eventType": "whisper",     
+                "parameters" : {               
+                    "dialogEvent": {
+                        "speakerID": "xxxxx",
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
-                                "mime-type": "text/plain",
+                                "mimeType": "text/plain",
                                 "tokens": [ { "value": "prescribe 180mg of citalopram"  } ]
                             }
                         }
                     }
                 }
-            },
-            { 
-                "event-type": "utterance-forward",
-                "parameters": {
-                    "to": {
-                        "url": "https://example.com/DMR",
-                        "labels*": ""
-                    }
-                }
             }
-
         ]
     }
 }

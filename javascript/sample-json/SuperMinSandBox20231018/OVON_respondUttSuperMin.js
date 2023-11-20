@@ -23,7 +23,7 @@ const OVON_RespondSuperMin = {
                 "parameters": {
                     "dialogEvent": {
                         "speakerId": "humanOrAssistantID",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
                                 "mimeType": "text/plain",

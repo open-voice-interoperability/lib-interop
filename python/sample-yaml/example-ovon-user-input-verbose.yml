@@ -8,11 +8,11 @@ context:
   speakers:
   - accessToken: asdfadsf
     role: user
-    speaker-id: b5y09lky5KU5
+    speakerID: b5y09lky5KU5
   - accessToken: sdlfkjalkhjasd
     agent-id: pharmacy1.com
     role: system
-    speaker-id: mh8k907jjj
+    speakerID: mh8k907jjj
   utterance-history:
   - '#': Utterance history events in here, or maybe a history server reference
 ovon:
@@ -27,11 +27,11 @@ ui-utterance-send:
     text:
       encoding: UTF-8
       lang: en
-      mime-type: text/plain
+      mimeType: text/plain
       tokens:
       - confidence: 0.702
         value: I need my repeat medication
   span:
-    end-offset: PT0.2493
-    start-time: '2023-06-14 02:06:07+00:00'
-  speaker-id: b5y09lky5KU5
+    endOffset: PT0.2493
+    startTime: '2023-06-14 02:06:07+00:00'
+  speakerID: b5y09lky5KU5

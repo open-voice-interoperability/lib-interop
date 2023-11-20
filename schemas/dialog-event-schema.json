@@ -1,17 +1,17 @@
 {
-  "$id": "https://openvoicenetwork.org/schema/dialog-event.json",
+  "$id": "https://openvoicenetwork.org/schema/dialogEvent.json",
   "$schema": "https://openvoicenetwork.org/schema",
   "description": "A representation of a 'language event’ that is to say any information associated with a phrase, utterance or part of an utterance.",
   "type": "object",
-  "required":  ["id" , "speaker-id", "span", "features" ],
+  "required":  ["id" , "speakerId", "span", "features" ],
   "properties": {
     "id": {
       "type": "string"
     },
-    "previous-id": {
+    "previousId": {
       "type": "string"
     },
-    "speaker-id": {
+    "speakerID": {
       "type": "string"
     },
     "span": { "$ref": "#/$defs/span" },
@@ -25,21 +25,21 @@
   "$defs": {
     "features": {
       "type": "object",
-      "required":  ["mime-type" , "tokens" ],
+      "required":  ["mimeType" , "tokens" ],
       "properties": {
         "encoding": {
           "type": "string",
           "description": "The text encoding of the token values"
         },
-        "mime-type": {
+        "mimeType": {
           "type": "string",
-          "description": "The mime-type of the token values"
+          "description": "The mimeType of the token values"
         },
         "lang": {
           "type": "string",
           "description": "The language of the token values"
         },
-        "token-schema": {
+        "tokenSchema": {
           "type": "string",
           "description": "A schema restricting the token values"
         },
@@ -65,13 +65,13 @@
       "type": "object",
       "anyOf": [
         { "required": ["value"] },
-        { "required": ["value-url"] }
+        { "required": ["valueUrl"] }
       ],
       "properties": {
           "value": {
             "type": ["number","string","object","array","boolean"]
           },
-          "value-url": {
+          "valueUrl": {
             "$ref": "#/$defs/url"
           },          
           "confidence": {
@@ -96,28 +96,28 @@
     },
     "span": {
       "anyOf": [
-        { "required": ["start-time"] },
-        { "required": ["start-offset"] }
+        { "required": ["startTime"] },
+        { "required": ["startOffset"] }
       ],
       "properties": {
-        "start-time": { 
-            "$ref": "#/$defs/iso-time" 
+        "startTime": { 
+            "$ref": "#/$defs/isoTime" 
         },
-        "end-time": { 
-            "$ref": "#/$defs/iso-time" 
+        "endTime": { 
+            "$ref": "#/$defs/isoTime" 
         },
-        "start-offset": {
-            "$ref": "#/$defs/iso-duration" 
+        "startOffset": {
+            "$ref": "#/$defs/isoDuration" 
         },
-        "end-offset": {
-            "$ref": "#/$defs/iso-duration" 
+        "endOffset": {
+            "$ref": "#/$defs/isoDuration" 
         }
       }
     },
-    "iso-time": {        
+    "isoTime": {        
       "description": "A string in ISO 8601 absolute format."
     },
-    "iso-duration": {        
+    "isoDuration": {        
       "description": "A string in ISO 8601 duration format."
     }
   }

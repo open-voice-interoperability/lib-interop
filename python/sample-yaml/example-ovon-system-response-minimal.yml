@@ -5,9 +5,9 @@ ovon:
 ui-utterance-respond:
   features:
     text:
-      mime-type: text/plain
+      mimeType: text/plain
       tokens:
       - value: I need my repeat medication
   span:
-    start-time: '2023-06-14 02:06:07+00:00'
-  speaker-id: b5y09lky5KU5
+    startTime: '2023-06-14 02:06:07+00:00'
+  speakerID: b5y09lky5KU5

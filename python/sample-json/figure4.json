@@ -1,14 +1,14 @@
 {
     "id": "user-utterance-30",
-    "speaker-id": "b5y09lky5KU5",
+    "speakerID": "b5y09lky5KU5",
     "span": {
-        "start-time": "2022-12-20 15:59:01.246500+00:00"
+        "startTime": "2022-12-20 15:59:01.246500+00:00"
     },
   
   
     "features": {
       "my-text-feature": {
-        "mime-type": "text/plain",
+        "mimeType": "text/plain",
         "tokens": [
           {
             "value": "what is the weather forecast for tomorrow",

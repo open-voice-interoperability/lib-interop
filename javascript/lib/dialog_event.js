@@ -21,14 +21,14 @@ class DialogPacket {
 }
 
 class Span extends DialogPacket {
-    constructor( {end_offset_msec=undefined,start_offset_msec=undefined} = {}) {
-        if (end_offset_msec!=undefined) { 
-            arguments[0].end_offset="PT"+(end_offset_msec/1000).toFixed(6);
-            arguments[0].end_offset_msec=undefined
+    constructor( {endOffset_msec=undefined,startOffset_msec=undefined} = {}) {
+        if (endOffset_msec!=undefined) { 
+            arguments[0].endOffset="PT"+(endOffset_msec/1000).toFixed(6);
+            arguments[0].endOffset_msec=undefined
         }
-        if (start_offset_msec!=undefined) { 
-            arguments[0].start_offset="PT"+(start_offset_msec/1000).toFixed(6);
-            arguments[0].start_offset_msec=undefined
+        if (startOffset_msec!=undefined) { 
+            arguments[0].startOffset="PT"+(startOffset_msec/1000).toFixed(6);
+            arguments[0].startOffset_msec=undefined
         }
         super(arguments[0]);
     }
@@ -49,7 +49,7 @@ class DialogEvent extends DialogPacket {
 }
 
 class Feature extends DialogPacket {
-    constructor({mime_type=undefined,lang=undefined,encoding=undefined}={}) {
+    constructor({mimeType=undefined,lang=undefined,encoding=undefined}={}) {
         super(arguments[0]);
         if (this.tokens==undefined) {
             this.tokens=[];

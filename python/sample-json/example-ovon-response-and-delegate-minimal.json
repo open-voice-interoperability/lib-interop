@@ -17,21 +17,21 @@
 
         "sender": {
             "from": "https://example.com/message-from",
-            "reply_to": "https://example.com/reply-message-to"
+            "replyTo": "https://example.com/reply-message-to"
         },
 
-        "response_code" : 200,  
+        "responseCode" : 200,  
 
         "events": [
             {
-                "event_type": "utterance",
+                "eventType": "utterance",
                 "parameters": {
-                    "dialog_event": {
-                        "speaker_id": "mh8k907jjj",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                    "dialogEvent": {
+                        "speakerId": "mh8k907jjj",
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
-                                "mime_type": "text/plain",
+                                "mimeType": "text/plain",
                                 "tokens": [ { "value": "OK. I'll pass you over to pharmacy dot com."  } ]
                             }
                         }
@@ -40,14 +40,14 @@
             },
 
             {
-                "event_type": "whisper",
+                "eventType": "whisper",
                 "parameters": {    
-                    "dialog_event": {
-                        "speaker_id": "xxxxx",
-                        "span": { "start_time": "2023-06-14 02:06:07+00:00" },
+                    "dialogEvent": {
+                        "speakerId": "xxxxx",
+                        "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
-                                "mime_type": "text/plain",
+                                "mimeType": "text/plain",
                                 "tokens": [ { "value": "prescribe 180mg of citalopram"  } ]
                             }
                         }
@@ -56,7 +56,7 @@
             },
             
             { 
-                "event_type": "invite",
+                "eventType": "invite",
                 "parameters": {
                     "to": {
                         "url": "https://mybot.pharmacy.com"
@@ -65,9 +65,8 @@
             },
 
 	    {
-                 "event_type" : "bye",
+                 "eventType" : "bye",
                  "parameters" : { 
-                     "discourse_status" : "closed|failed|open|paused|uncategorized"
                  }
             }
 
