@@ -114,6 +114,25 @@
                     }
                   }
                 }
+              },
+
+              {
+                "if": {
+                  "properties": {
+                    "eventType": { "const": "bye" }
+                  },
+                  "required": ["eventType"]
+                },
+                "then" : {
+                  "properties": { 
+                    "parameters" : {
+                      "description": "Parameters for the bye event.",
+                      "type": "object",
+                      "properties": {}
+                    },  
+                    "additionalProperties": false
+                  }
+                }
               }
 
             ]
