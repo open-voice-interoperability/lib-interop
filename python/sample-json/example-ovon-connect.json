@@ -20,13 +20,13 @@
         "conversationID": "some-unique-convo-ID",
         "speakers": [
             {
-                "speakerID": "b5y09lky5KU5",
+                "speaker-id": "b5y09lky5KU5",
                 "accessToken": "asdfadsf",
                 "role": "user"
             },
             {
                 "agent-id": "weatherman.com",
-                "speakerID": "mh8k907jjj",
+                "speaker-id": "mh8k907jjj",
                 "accessToken": "sdlfkjalkhjasd",
                 "role": "system"
             }
