@@ -13,6 +13,9 @@ const OVON_RespondSuperMin = {
         "conversation": {
             "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
+        "schema": {
+            "version": "0.9.0",
+        },
         "sender": {
             "from": "https://someBotThatOfferedTheUtterance.com"
         },

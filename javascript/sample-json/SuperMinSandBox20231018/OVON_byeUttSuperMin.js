@@ -13,6 +13,9 @@ const OVON_ByeSuperMin = {
         "conversation": {
             "id": "someUniqueIdCreatedByTheFirstParticipant"
         },
+        "schema": {
+            "version": "0.9.0",
+        },
         "sender": {
             "from": "https://someBotThatOfferedTheBye.com"
         },
