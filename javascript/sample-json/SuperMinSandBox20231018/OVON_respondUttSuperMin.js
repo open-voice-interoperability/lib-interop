@@ -16,7 +16,7 @@ const OVON_RespondSuperMin = {
         "sender": {
             "from": "https://someBotThatOfferedTheUtterance.com"
         },
-        "responseCode" : 200,
+        "responseCode" : { "code": 200} ,
         "events": [
             {
                 "eventType": "utterance",

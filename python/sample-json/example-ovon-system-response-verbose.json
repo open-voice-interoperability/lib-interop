@@ -12,35 +12,8 @@
 
         "conversation": {
             "id": "31050879662407560061859425913208",
-            "thread" : "abcdef234567hygt",
-            
-            "speakers": [
-                {
-                    "speakerID" : "mh8k907jjj",   
-                    "speaker_type" : "bot",
-                    "spoken-name" : "Bot Mc-bot Face",
-                    "display-name" : "Bot Mc-bot Face",
-                    "avatar-url": "https://example.com/display-name-avatar.png"
-                },
-                {
-                    "speakerID" : "sdfkjhsdg98797234523",   
-                    "speaker_type" : "human",
-                    "displayname": "User Mc-user Face",
-                    "spoken-name" : "User Mc-user Face",
-                    "avatar-url": "https://example.com/usermcuserface.png"
-                }
-            ],
-
-            "delegate-history": [
-                {"#":"History of delegation events in here, or maybe a history server url"}
-            ],
-
-            "utterance-history": [
-                {"#":"Utterance history events in here, or maybe a history server url"}
-            ],
-
-            "custom-context": {
-                "#arbitrary items here or do we define some?#":""
+            "persistentState": {
+                "www.cassandra.com:457ns654y" : "49kwu698dkw75hfks943jglsesjrforr94j489f62whdkd948rjfleo29378hgndoir03487543iuhrefiuodf087riu8435huoj43do0e987g0er84u35n34-0-f9-f8jiertoppe9t53"
             }
         }, 
 
@@ -53,16 +26,16 @@
                         "span": {"startTime": "2023-06-14 02:06:12+00:00"},
                         
                         "features": {
-                            "audio": {
-                                "mimeType": "audio/mpeg",
-                                "value-uri" : "https://texttospeech.googleapis.com/v1beta1/text:synthesize?Authorization: Bearer ACCESS_TOKEN { \"input\": {\"text\": \"<speak> <s>We have a regular prescription for Citalopram 20 mg on file </s> </speak>\" }, \"voice\": { \"languageCode\": \"en-US\", \"name\": \"en-US-WaveNet-D\" }, \"audioConfig\": {\"audioEncoding\": \"MP3\"} }"
-                            },
-
                             "text": {
                                 "mimeType": "plain/text",
                                 "lang": "en",
                                 "encoding": "UTF-8",
                                 "tokens": [ { "value": "We have a regular prescription for Citalopram 20 mg on file"  } ]
+                            },
+
+                            "audio": {
+                                "mimeType": "audio/mpeg",
+                                "value-uri" : "https://texttospeech.googleapis.com/v1beta1/text:synthesize?Authorization: Bearer ACCESS_TOKEN { \"input\": {\"text\": \"<speak> <s>We have a regular prescription for Citalopram 20 mg on file </s> </speak>\" }, \"voice\": { \"languageCode\": \"en-US\", \"name\": \"en-US-WaveNet-D\" }, \"audioConfig\": {\"audioEncoding\": \"MP3\"} }"
                             },
                     
                             "redacted-text": {
@@ -72,7 +45,7 @@
                                 "tokens": [ { "value": "We have a regular prescription for $MEDICATION on file"  } ]
                             },
                     
-                            "ssml-text": {
+                            "ssml": {
                                 "mimeType": "ssml+xml",
                                 "tokens": [ { "value": "<speak> <s>We have a regular prescription for Citalopram 20 mg on file </s> </speak>" } ]
                             },

@@ -13,7 +13,7 @@ const OVON_invite_NextAssistantSuperMin = {
         "sender": {
             "from": "https://someBotThatOfferedTheInvite.com"
         },
-        "responseCode" : 200,
+        "responseCode" : { "code": 200} ,
         "events": [
             {
                 "eventType": "invite",
@@ -41,7 +41,7 @@ const OVON_invite_NextAssistantWithUttOrWhisper = {
         "sender": {
             "from": "https://someBotThatOfferedTheInvite.com"
         },
-        "responseCode" : 200,
+        "responseCode" : { "code": 200} ,
         "events": [
             {
                 "eventType": "invite",

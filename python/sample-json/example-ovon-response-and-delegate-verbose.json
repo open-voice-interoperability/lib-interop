@@ -5,25 +5,16 @@
             "version": "1.0"      
         },
 
+        "responseCode" : { 
+            "code": 200,
+            "description" : "Success!"
+        },
+
         "conversation": {
             "id": "31050879662407560061859425913208",
-
-            "speakers": [
-                {
-                    "speakerID" : "mh8k907jjj",   
-                    "speaker_type" : "bot",
-                    "spoken-name" : "Bot Mc-bot Face",
-                    "display-name" : "Bot Mc-bot Face",
-                    "avatar-url": "https://example.com/display-name-avatar.png"
-                },
-                {
-                    "speakerID" : "sdfkjhsdg98797234523",   
-                    "speaker_type" : "human",
-                    "displayname": "User Mc-user Face",
-                    "spoken-name" : "User Mc-user Face",
-                    "avatar-url": "https://example.com/usermcuserface.png"
-                }
-            ]
+            "persistentState": {
+                "www.cassandra.com:457ns654y" : "49kwu698dkw75hfks943jglsesjrforr94j489f62whdkd948rjfleo29378hgndoir03487543iuhrefiuodf087riu8435huoj43do0e987g0er84u35n34-0-f9-f8jiertoppe9t53"
+            }
         }, 
 
         "sender": {
@@ -54,6 +45,9 @@
                         "url": "https://mybot.pharmacy.com"
                     }   
                 }
+            },
+            { 
+                "eventType": "bye"
             },
             { 
                 "eventType": "whisper",     

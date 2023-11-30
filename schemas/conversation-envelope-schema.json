@@ -42,7 +42,7 @@
 
         "sender": {
           "type": "object",
-          "required":  ["from","replyTo" ],
+          "required":  ["from"],
           "properties" : {
             "from": {
               "$ref": "#/$defs/url",
@@ -57,6 +57,17 @@
         },
 
         "responseCode": {  
+          "type": "object",
+          "required":  ["code"],
+          "properties" : {
+            "code" : {
+              "type" : "integer"
+            },
+            "description" : {
+              "type" : "string"
+            }            
+          }
+
         },
 
         "events": {  

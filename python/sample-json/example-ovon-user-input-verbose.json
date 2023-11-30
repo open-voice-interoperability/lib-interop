@@ -4,21 +4,17 @@
             "url": "https://ovon/conversation/pre-alpha-1.0.1",
             "version": "1.0"      
         },
+ 
+        "sender": {
+            "from": "https://example.com/message-from",
+            "replyTo": "https://example.com/reply-message-to"
+        },
+
 
         "conversation": {
             "id": "31050879662407560061859425913208",
-            "thread" : "abcdef234567hygt",
-
-            "delegate-history": [
-                {"#":"History of delegation events in here, or maybe a history server url"}
-            ],
-
-            "utterance-history": [
-                {"#":"Utterance history events in here, or maybe a history server url"}
-            ],
-
-            "custom-context": {
-                "#arbitrary items here or do we define some?#":""
+            "persistentState": {
+                "www.cassandra.com:457ns654y" : "49kwu698dkw75hfks943jglsesjrforr94j489f62whdkd948rjfleo29378hgndoir03487543iuhrefiuodf087riu8435huoj43do0e987g0er84u35n34-0-f9-f8jiertoppe9t53"
             }
         }, 
 

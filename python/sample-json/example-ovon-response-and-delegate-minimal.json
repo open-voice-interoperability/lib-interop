@@ -1,26 +1,20 @@
 {
     "ovon": {
         "schema": {
-            "url": "https://ovon/conversation/pre-alpha-1.0.1",
             "version": "1.0"      
         },
 
         "conversation": {
-            "id": "31050879662407560061859425913208",
-
-            "persistent_state": {
-                 "unique_key1": {"#":"Arbitrary JSON Object"},
-                 "unique_key2": {"#":"Arbitrary JSON Object"} 
-            }
-        
+            "id": "31050879662407560061859425913208"
         }, 
 
         "sender": {
-            "from": "https://example.com/message-from",
-            "replyTo": "https://example.com/reply-message-to"
+            "from": "https://example.com/message-from"
         },
 
-        "responseCode" : 200,  
+        "responseCode" : { 
+            "code": 200
+        },
 
         "events": [
             {
@@ -43,7 +37,7 @@
                 "eventType": "whisper",
                 "parameters": {    
                     "dialogEvent": {
-                        "speakerId": "xxxxx",
+                        "speakerId": "ab45jyht",
                         "span": { "startTime": "2023-06-14 02:06:07+00:00" },
                         "features": {
                             "text": {
@@ -64,10 +58,8 @@
                 }
             },
 
-	    {
-                 "eventType" : "bye",
-                 "parameters" : { 
-                 }
+	        {
+                 "eventType" : "bye"
             }
 
         ]

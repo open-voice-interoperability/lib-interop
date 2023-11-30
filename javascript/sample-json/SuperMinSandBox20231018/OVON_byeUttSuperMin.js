@@ -16,7 +16,7 @@ const OVON_ByeSuperMin = {
         "sender": {
             "from": "https://someBotThatOfferedTheBye.com"
         },
-        "responseCode" : 200,
+        "responseCode" : { "code": 200} ,
         "events": [
 	        {
                  "eventType" : "bye",
@@ -34,7 +34,7 @@ const OVON_ByeWithUtt = {
         "sender": {
             "from": "https://someBotThatOfferedTheBye.com"
         },
-        "responseCode" : 200,
+        "responseCode" : { "code": 200} ,
         "events": [
             {
                 "eventType": "utterance",

@@ -1,13 +1,16 @@
 {
     "ovon": {
         "schema": {
-            "url": "https://ovon/conversation/pre-alpha-1.0.1",
             "version": "1.0"      
         },
 
         "conversation": {
             "id": "31050879662407560061859425913208"
         }, 
+        
+        "sender": {
+            "from": "https://example.com/message-from"
+        },
 
         "events": [
             {
