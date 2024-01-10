@@ -1,5 +1,5 @@
 {
-  "$id": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/0.9.0/conversation-envelope-schema.json",
+  "$id": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/conversation-envelope/0.9.0/conversation-envelope-schema.json",
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "A representation of a 'dialogue envelope’ - the universal data exchange format for an OVON compliant interoperable agent.",
   "type": "object",
@@ -95,7 +95,7 @@
                       "type" : "object",
                       "properties" : {
                         "dialogEvent": {
-                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/1.0.1/dialog-event-schema.json"
+                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/dialog-event/1.0.1/dialog-event-schema.json"
                         }
                       },  
                       "additionalProperties": false
@@ -118,7 +118,7 @@
                       "type" : "object",
                       "properties" : {
                         "dialogEvent": {
-                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/1.0.1/dialog-event-schema.json"
+                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/dialog-event/1.0.1/dialog-event-schema.json"
                         }
                       },
                       "additionalProperties": false
