@@ -1,6 +1,6 @@
 {
     "id": "user-utterance-45",
-    "speakerID": "user1234",
+    "speakerId": "user1234",
     "previousId": "user-utterance-44",
     "span": {
         "startTime": "2023-06-22T23:20:44.250759",
@@ -11,7 +11,7 @@
             "mimeType": "audio/wav",
             "tokens": [
                 {
-                    "value-url": "http://localhost:8080/ab78h50ef.wav"
+                    "valueUrl": "http://localhost:8080/ab78h50ef.wav"
                 }
             ]
         },

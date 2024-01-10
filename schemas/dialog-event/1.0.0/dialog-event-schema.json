@@ -3,7 +3,7 @@
   "$schema": "https://openvoicenetwork.org/schema",
   "description": "A representation of a 'language event’ that is to say any information associated with a phrase, utterance or part of an utterance.",
   "type": "object",
-  "required":  ["id" , "speakerId", "span", "features" ],
+  "required":  ["id" , "speaker-id", "span", "features" ],
   "properties": {
     "id": {
       "type": "string"
@@ -25,7 +25,7 @@
   "$defs": {
     "features": {
       "type": "object",
-      "required":  ["mimeType" , "tokens" ],
+      "required":  ["mime-type" , "tokens" ],
       "properties": {
         "encoding": {
           "type": "string",
@@ -33,13 +33,13 @@
         },
         "mimeType": {
           "type": "string",
-          "description": "The mimeType of the token values"
+          "description": "The Mime Type of the token values"
         },
         "lang": {
           "type": "string",
           "description": "The language of the token values"
         },
-        "tokenSchema": {
+        "token-schema": {
           "type": "string",
           "description": "A schema restricting the token values"
         },
@@ -65,7 +65,7 @@
       "type": "object",
       "anyOf": [
         { "required": ["value"] },
-        { "required": ["valueUrl"] }
+        { "required": ["value-url"] }
       ],
       "properties": {
           "value": {
@@ -96,20 +96,20 @@
     },
     "span": {
       "anyOf": [
-        { "required": ["startTime"] },
-        { "required": ["startOffset"] }
+        { "required": ["start-time"] },
+        { "required": ["start-offset"] }
       ],
       "properties": {
-        "startTime": { 
+        "start-time": { 
             "$ref": "#/$defs/isoTime" 
         },
-        "endTime": { 
+        "end-time": { 
             "$ref": "#/$defs/isoTime" 
         },
-        "startOffset": {
+        "start-offset": {
             "$ref": "#/$defs/isoDuration" 
         },
-        "endOffset": {
+        "end-offset": {
             "$ref": "#/$defs/isoDuration" 
         }
       }

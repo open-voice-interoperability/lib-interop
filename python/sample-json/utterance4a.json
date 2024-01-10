@@ -1,5 +1,5 @@
 {
-    "speakerID": "b5y09lky5KU5",
+    "speakerId": "b5y09lky5KU5",
     "id": "user-utterance-30",
     "previousId": "user-utterance-28",
     "span": {
@@ -11,7 +11,7 @@
             "mimeType": "audio/wav",
             "tokens": [ 
                 { 
-                    "value-url": "http://localhost/xyz1234.wav" 
+                    "valueUrl": "http://localhost/xyz1234.wav" 
                 }            
             ]
         },

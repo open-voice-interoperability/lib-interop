@@ -2,7 +2,7 @@ features:
   user-request-audio:
     mimeType: audio/wav
     tokens:
-    - value-url: http://localhost:8080/ab78h50ef.wav
+    - valueUrl: http://localhost:8080/ab78h50ef.wav
   user-request-text:
     encoding: utf-8
     lang: en
@@ -25,4 +25,4 @@ previousId: user-utterance-44
 span:
   endOffset: PT1.045
   startTime: '2023-06-22T23:20:44.250759'
-speakerID: user1234
+speakerId: user1234

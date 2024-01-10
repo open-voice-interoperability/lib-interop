@@ -12,7 +12,7 @@
         "mimeType": "audio/wav",
         "tokens": [
           {
-            "value-url": "http://localhost/xyz1234.wav"
+            "valueUrl": "http://localhost/xyz1234.wav"
           }            
         ]
       },

@@ -1,6 +1,6 @@
 {
     "id": "user-utterance-45",
-    "speakerID": "user1234",
+    "speakerId": "user1234",
     "previousId": "user-utterance-44",
     
     "span": {

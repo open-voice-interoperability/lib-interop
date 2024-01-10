@@ -1,6 +1,6 @@
 {
-  "$id": "https://openvoicenetwork.org/schema/dialog-envelope.json",
-  "$schema": "https://openvoicenetwork.org/schema",
+  "$id": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/0.9.0/conversation-envelope-schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "description": "A representation of a 'dialogue envelope’ - the universal data exchange format for an OVON compliant interoperable agent.",
   "type": "object",
   "required":  [ "ovon" ],
@@ -45,12 +45,12 @@
           "required":  ["from"],
           "properties" : {
             "from": {
-              "$ref": "#/$defs/url",
-              "description": "The URL of the sender of the envelope."
+              "$ref": "#/$defs/uri",
+              "description": "The URI of the sender of the envelope."
             },
             "replyTo": {
-              "$ref": "#/$defs/url",
-              "description": "The URL to direct responses to the envelope."
+              "$ref": "#/$defs/uri",
+              "description": "The URI to direct responses to the envelope."
             }
           }
 
@@ -95,7 +95,7 @@
                       "type" : "object",
                       "properties" : {
                         "dialogEvent": {
-                          "type": "object"
+                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/1.0.1/dialog-event-schema.json"
                         }
                       },  
                       "additionalProperties": false
@@ -118,7 +118,7 @@
                       "type" : "object",
                       "properties" : {
                         "dialogEvent": {
-                          "type" : "object"
+                          "ref": "https://github.com/open-voice-interoperability/lib-interop/tree/main/schemas/1.0.1/dialog-event-schema.json"
                         }
                       },
                       "additionalProperties": false
@@ -188,6 +188,11 @@
     "url": {
       "type": "string",
       "description": "Any valid URL"
+    },
+    "uri": {
+      "type": "string",
+      "description": "Any valid URI"
     }
+
   }
 }
